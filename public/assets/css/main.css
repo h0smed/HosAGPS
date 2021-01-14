@@ -1,0 +1,218 @@
+/*
+Basic body properties
+ */
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+/*
+Vertical alignment
+ */
+.output__icon,
+input[type=range] {
+	vertical-align: middle;
+}
+
+/*
+Search area
+ */
+
+.range-text {
+	display: inline-block;
+	width: 30px;
+}
+
+.search {
+	padding-top: 1rem;
+	clear: both;
+}
+
+.search__settings {
+	white-space: nowrap;
+	flex-wrap: wrap;
+}
+
+.search__settings label,
+.search__settings select,
+.search__settings input {
+	display: inline-block;
+}
+
+.search__settings label {
+	padding-right: 0.5rem;
+}
+
+.search__setting {
+	opacity: 0.75;
+	line-height: 40px;
+}
+
+.search__setting:hover,
+.search__setting:active,
+.search__setting.search__setting--set {
+	opacity: 1;
+}
+
+.search__setting:not(:last-child){
+	border-right: 1px solid black;
+	padding-right: 1rem;
+}
+
+.search__setting:not(:first-child){
+	padding-left: 1rem;
+}
+
+.search__setting .uk-checkbox {
+	margin-left: 1rem;
+}
+
+#maxPrice {
+	width: 10rem;
+}
+
+#category {
+	width: 12rem;
+}
+
+#minInstalls {
+	width: 7rem;
+}
+
+#minScore,
+#maxSize {
+	width: 4rem;
+}
+
+#maxUpdatedDays {
+	width: 7rem;
+	margin-right: 0.5rem;
+}
+
+#minAndroidVersion {
+	width: 5rem;
+}
+
+/*
+Results area
+ */
+
+.output__message .spinner {
+	margin-right: 0.5rem;
+}
+
+.output__icon {
+	width: 25px;
+	height: 25px;
+	object-fit: cover;
+	margin-right: 1rem;
+}
+
+.output__table th,
+.output__table td {
+	padding: 1rem;
+	/*border: 1px solid gray;*/
+	min-width: 80px;
+}
+
+.output__header:hover,
+.output__item:hover {
+	cursor: pointer;
+}
+
+.output__header th:after {
+	content: '\f0dc';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	float: right;
+}
+
+.output__header th.output__header--sortUp:after {
+	content: '\f0de';
+}
+
+.output__header th.output__header--sortDown:after {
+	content: '\f0dd';
+}
+
+.output__header__description:after,
+.output__header__version:after {
+	display: none;
+}
+
+.output__data__name {
+	line-height: 2rem;
+}
+
+.output__data__installs {
+	text-align: right;
+}
+
+.output__data__score,
+.output__data__size,
+.output__data__price,
+.output__data__IAP {
+	text-align: center;
+}
+
+.output__data__index:before {
+	content: '#'
+}
+
+.output__data__index {
+	opacity: 0.5;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.output2__permission td {
+	font-size: 30px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.output2__header th:first-child,
+.output2__permission__name {
+	text-align: right!important;
+}
+
+.output2__header th:first-child,
+.output2__app {
+	vertical-align: middle!important;
+}
+
+.output2__app {
+	text-align: center!important;
+}
+
+@media screen and (max-width: 1630px){
+	.search__setting {
+		display: block;
+		padding-left: 0!important;
+		border: none!important;
+		margin: 2rem 0;
+	}
+	.search__setting .uk-checkbox {
+		margin: 0;
+	}
+	.output__table {
+		max-width: 100%;
+		overflow-x: auto;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.search__settings {
+		flex-direction: column;
+	}
+	label, select,
+	input:not(.uk-checkbox):not(.search__input):not(.search__submit) {
+		width: 8rem!important;
+	}
+}
