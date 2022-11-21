@@ -6,7 +6,7 @@
   "author": "KaKi87",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^3.4.1",
+    "fastify": "^3.29.4",
     "fastify-static": "^3.2.0",
     "google-play-scraper": "*"
   },
